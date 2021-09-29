@@ -54,5 +54,10 @@ CREATE TABLE `passenger_details` (
   `p_bookingdate` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+ALTER TABLE `passenger_details`
+  ADD PRIMARY KEY (`p_id`);
+
+ALTER TABLE `passenger_details`
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 CREATE TABLE PNR(PNR_NO VARCHAR(20),TOTAL_AMOUNT DOUBLE);
