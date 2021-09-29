@@ -34,8 +34,8 @@ CREATE TABLE IF NOT EXISTS `flight_details` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
-CREATE TABLE IF NOT EXISTS `passenger_details` (
-  `p_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `passenger_details` (
+  `p_id` int(11) NOT NULL,
   `p_pnr` varchar(25) NOT NULL,
   `p_name` varchar(50) NOT NULL,
   `p_age` varchar(3) NOT NULL,
@@ -43,17 +43,16 @@ CREATE TABLE IF NOT EXISTS `passenger_details` (
   `p_fno` varchar(10) NOT NULL,
   `p_from` varchar(10) NOT NULL,
   `p_to` varchar(10) NOT NULL,
-  `p_dedate` varchar(20) NOT NULL,
-  `p_ardate` varchar(20) NOT NULL,
+  `p_dedate` date DEFAULT NULL,
+  `p_ardate` date DEFAULT NULL,
   `p_detime` varchar(20) NOT NULL,
   `p_artime` varchar(20) NOT NULL,
   `p_status` varchar(20) NOT NULL,
   `p_class` varchar(10) NOT NULL,
   `p_seatno` int(20) NOT NULL,
-  `p_fid` varchar(5) NOT NULL,
-  `p_bookingdate` varchar(40),
-  PRIMARY KEY (`p_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `p_email` varchar(30) DEFAULT NULL,
+  `p_bookingdate` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE PNR(PNR_NO VARCHAR(20),TOTAL_AMOUNT DOUBLE);
