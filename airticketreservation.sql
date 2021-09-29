@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `passenger_details` (
   `p_class` varchar(10) NOT NULL,
   `p_seatno` int(20) NOT NULL,
   `p_fid` varchar(5) NOT NULL,
-  `p_bookingdate` varchar(40);
+  `p_bookingdate` varchar(40),
   PRIMARY KEY (`p_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
