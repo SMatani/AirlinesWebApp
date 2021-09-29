@@ -100,8 +100,8 @@ public class SendEmail {
 
 	// Setting mail properties
 	public Session SetMailProperties(String email) {
-		final String user = "sonammatani88@gmail.com";
-		final String password = "Donotdare@123";
+		final String user = "mail@gmail.com";
+		final String password = "password";
 
 		{
 
